@@ -1,0 +1,39 @@
+.countryDetails {
+  padding: 2em;
+}
+.countryDetails img {
+  border-radius: 16px;
+}
+.countryStats {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.population,
+.area {
+  display: flex;
+  text-align: center;
+  /* justify-content: space-around; */
+  padding: 0.9rem;
+  border-radius: 16px;
+  gap: 1rem;
+  background-color: #282b30;
+}
+
+.countryStats,
+.region,
+.subregion,
+.capital,
+.currencies,
+.languages {
+  display: flex;
+  padding: 1rem;
+
+  /* border-top: 3px #25272b; */
+  /* border: 3px red; */
+  justify-content: space-between;
+}

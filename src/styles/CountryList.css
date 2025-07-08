@@ -1,0 +1,35 @@
+.containerList {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: auto;
+  font-family: sans-serif;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.containerList a {
+  color: white;
+  font-size: 14px;
+
+  text-decoration: none;
+}
+
+.header,
+.row {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.header {
+  font-weight: bold;
+  border-bottom: 2px solid #555;
+}
+
+.row img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

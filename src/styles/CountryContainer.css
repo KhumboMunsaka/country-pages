@@ -1,0 +1,18 @@
+.country-container {
+  background-color: #1c1d1f;
+  /* height: 80vh; */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .found-n-search,
+  .all-details {
+    display: flex;
+  }
+  .found-n-search {
+    justify-content: space-between;
+    padding-top: 1.6rem;
+  }
+}

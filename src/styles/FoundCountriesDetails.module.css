@@ -1,0 +1,19 @@
+.countriesFound {
+  display: flex;
+  margin: 0 auto;
+  justify-content: left;
+  align-items: center;
+  max-width: 90%;
+  /* align-items: start; */
+  /* align-items: center; */
+}
+
+.countriesFound p {
+  align-self: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .countriesFound p {
+    font-size: 1.2rem;
+  }
+}
