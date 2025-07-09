@@ -11,20 +11,19 @@ function CountryComponent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
-    async function getCountry() {
-      try {
-        const res = await fetch(BASE_URL);
+    // whenever `code` changes, show spinner and clear errors
+    setLoading(true);
+    setError(null);
+
+    fetch(`https://restcountries.com/v3.1/alpha/${code.toLowerCase()}`)
+      .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch country");
-        const data = await res.json();
-        setCountry(data[0]);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-    getCountry();
-  }, [BASE_URL]);
+        return res.json();
+      })
+      .then((data) => setCountry(data[0]))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, [code]);
 
   if (loading) return <Loading />;
   if (error) return <Error message={error} />;
